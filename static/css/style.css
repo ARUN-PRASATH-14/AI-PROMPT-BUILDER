@@ -1,0 +1,98 @@
+body {
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    color: white;
+}
+
+.glass-container {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    padding: 3rem;
+    width: 90%;
+    max-width: 700px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
+}
+
+textarea {
+    width: 100%;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    color: white;
+    padding: 15px;
+    font-size: 1rem;
+    outline: none;
+    resize: none;
+    margin: 1.5rem 0;
+}
+
+button {
+    background: linear-gradient(90deg, #6e8efb, #a777e3);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.output-box {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    border-left: 4px solid #a777e3;
+}
+
+/* Add this to your existing CSS */
+
+.output-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.copy-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #a777e3;
+    padding: 5px 15px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.copy-btn:hover {
+    background: #a777e3;
+    color: white;
+}
+
+.output-box {
+    margin-top: 1rem;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.3); /* Slightly darker for contrast */
+    border-radius: 15px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    border-left: 4px solid #a777e3;
+    white-space: pre-wrap; /* Preserves the AI's formatting */
+}
+
