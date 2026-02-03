@@ -1,34 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexus AI | Intelligent Prompting</title>
+    <title>Promtly AI | The Prompt Engine</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
-<body>
-    <div class="glass-container">
-        <h1>Nexus AI</h1>
-        <p>Turn simple thoughts into production-ready prompts.</p>
-        
-        <textarea id="promptInput" placeholder="Enter your simple idea here..."></textarea>
-        
-        <button onclick="processPrompt()">Generate ⚡</button>
 
-        <div id="resultContainer" style="display: none;">
-    <div class="output-header">
-        <h3>Optimized Prompt:</h3>
-        <button class="copy-btn" onclick="copyToClipboard()">Copy Prompt</button>
+<body>
+
+    <!-- Fluid Canvas Background -->
+    <canvas id="fluidCanvas"></canvas>
+
+
+    <div class="background-effects">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
     </div>
-    <div id="outputText" class="output-box"></div>
-</div>
+
+    <div class="main-container">
+
+        <div class="hero-section">
+            <span class="badge">V1.0 BETA RELEASE</span>
+            <h1 class="title">PROMTLY <span class="gradient-text">AI</span></h1>
+            <p class="subtitle">Engineering high-fidelity system prompts for the next generation of intelligence.</p>
+        </div>
+
+        <div class="interaction-card">
+
+            <div class="chips-container">
+                <button class="chip" onclick="setPrompt('Create a Python game that...')">Python Game</button>
+                <button class="chip" onclick="setPrompt('Generate a brand identity for...')">Brand Identity</button>
+                <button class="chip" onclick="setPrompt('Write a complex SQL query to...')">SQL Logic</button>
+            </div>
+
+            <div class="input-wrapper">
+                <textarea id="promptInput" placeholder="Type your rough idea here..."></textarea>
+            </div>
+
+            <div class="action-bar">
+                <div class="status-indicator">
+                    <span class="dot"></span> Auto-Detect Mode Active
+                </div>
+                <button class="init-btn" onclick="processPrompt()">
+                    Initialize <span class="arrow">→</span>
+                </button>
+            </div>
+
+        </div>
+
+        <div id="resultContainer" class="result-container" style="display: none;">
+            <div class="output-header">
+                <h3>System Output</h3>
+                <button class="copy-btn" onclick="copyToClipboard()">Copy to Clipboard</button>
+            </div>
+            <div id="outputText" class="output-content"></div>
+        </div>
+
     </div>
-    <div class="bg-animation">
-    <div class="blob"></div>
-</div>
-<div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Cursor Effect -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-glow" id="cursorGlow"></div>
 
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
+
 </html>
