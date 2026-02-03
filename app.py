@@ -24,7 +24,7 @@ client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
 
 SYSTEM_INSTRUCTION = """
-You are 'Nexus AI', an elite Prompt Engineer.
+You are 'Promtly AI', an elite Prompt Engineer.
 Transform the user's input into a production-ready prompt using the CO-STAR framework.
 
 Rules:
