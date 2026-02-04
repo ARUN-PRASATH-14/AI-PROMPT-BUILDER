@@ -95,7 +95,7 @@ async function processPrompt() {
     if (!input.trim()) return alert("Please enter a rough idea first.");
 
     // Loading State
-    outputDiv.innerHTML = "<span class='pulsate'>Initializing Nexus Engine...</span>";
+    outputDiv.innerHTML = "<span class='pulsate'>Initializing Prompt Engine...</span>";
     container.style.display = "block";
     initBtn.innerText = "Processing...";
     initBtn.disabled = true;
